@@ -10,7 +10,7 @@ class mdl_sca01002_System_Structure_m extends MY_Model {
 	function insert_rolesmaster($array)
 	{
 	$roles = $this->db->insert('_systemelements_rolesmaster',$array);
-	//$this->add_actionlog('System Elements', 'Role Master Created');
+	$this->add_actionlog('System Structure', 'Role Master Data Created');
 	return $roles;
 	}
 
@@ -19,7 +19,7 @@ class mdl_sca01002_System_Structure_m extends MY_Model {
 	{
 	$this->db->where($where);   
 	$roles = $this->db->update('_systemelements_rolesmaster',$array);
-	//$this->add_actionlog('System Elements', 'Role Master Updated');
+	$this->add_actionlog('System Structure', 'Role Master Data Updated');
 	return $roles;
 	}
 
@@ -41,7 +41,7 @@ class mdl_sca01002_System_Structure_m extends MY_Model {
 	function deleteRoleMasterData($RoleID)
 	{
 	$users = $this->db->query("Delete from _systemelements_rolesmaster where RoleID='$RoleID'");
-	//$this->add_actionlog('Service Management', 'Plan Attribute Deleted');
+	$this->add_actionlog('System Structure', 'Role Master Data Deleted');
 	return TRUE;
 	}	
 
@@ -53,7 +53,7 @@ class mdl_sca01002_System_Structure_m extends MY_Model {
 	function insert_rolesaccess($array)
 	{
 	$roles = $this->db->insert('_systemelements_rolesaccess',$array);
-	//$this->add_actionlog('System Elements', 'Role Access Created');
+	$this->add_actionlog('System Structure', 'Role Access Data Created');
 	return $roles;
 	}
 
@@ -62,7 +62,7 @@ class mdl_sca01002_System_Structure_m extends MY_Model {
 	{
 	$this->db->where($where);   
 	$roles = $this->db->update('_systemelements_rolesaccess',$array);
-	//$this->add_actionlog('System Elements', 'Role Access Updated');
+	$this->add_actionlog('System Structure', 'Role Access Data Updated');
 	return $roles;
 	}
 
@@ -84,7 +84,7 @@ class mdl_sca01002_System_Structure_m extends MY_Model {
 	function deleteRoleAccess($RoleAccessID)
 	{
 	$query = $this->db->query("Delete from _systemelements_rolesaccess where RoleAccessID='$RoleAccessID'");
-	//$this->add_actionlog('Service Management', 'Plan Attribute Deleted');
+	$this->add_actionlog('System Structure', 'Role Access Data Deleted');
 	return TRUE;
 	}
 
@@ -96,7 +96,7 @@ class mdl_sca01002_System_Structure_m extends MY_Model {
 	function insert_screens($array)
 	{
 	$functions = $this->db->insert('_systemelements_screens',$array);
-	//$this->add_actionlog('System Elements', 'Role Access Created');
+	$this->add_actionlog('System Structure', 'Screens Data Created');
 	return $functions;
 	}
 
@@ -105,7 +105,7 @@ class mdl_sca01002_System_Structure_m extends MY_Model {
 	{
 	$this->db->where($where);   
 	$functions = $this->db->update('_systemelements_screens',$array);
-	//$this->add_actionlog('System Elements', 'Role Access Updated');
+	$this->add_actionlog('System Structure', 'Screens Data Updated');
 	return $functions;
 	}
 
@@ -119,7 +119,7 @@ class mdl_sca01002_System_Structure_m extends MY_Model {
 	function deleteScreens($ScreenID)
 	{
 	$query = $this->db->query("Delete from _systemelements_screens where ScreenID='$ScreenID'");
-	//$this->add_actionlog('Service Management', 'Plan Attribute Deleted');
+	$this->add_actionlog('System Structure', 'Screens Data Deleted');
 	return TRUE;
 	}	
 	
@@ -132,7 +132,7 @@ class mdl_sca01002_System_Structure_m extends MY_Model {
 	function insert_processesandfunctions($array)
 	{
 	$functions = $this->db->insert('_systemelements_processesandfunctions',$array);
-	//$this->add_actionlog('System Elements', 'Role Access Created');
+	$this->add_actionlog('System Structure', 'Processes and Functions Created');
 	return $functions;
 	}
 
@@ -141,7 +141,7 @@ class mdl_sca01002_System_Structure_m extends MY_Model {
 	{
 	$this->db->where($where);   
 	$functions = $this->db->update('_systemelements_processesandfunctions',$array);
-	//$this->add_actionlog('System Elements', 'Role Access Updated');
+	$this->add_actionlog('System Structure', 'Processes and Functions  Updated');
 	return $functions;
 	}
 
@@ -155,7 +155,7 @@ class mdl_sca01002_System_Structure_m extends MY_Model {
 	function deleteFunctions($FunctionID)
 	{
 	$query = $this->db->query("Delete from _systemelements_processesandfunctions where FunctionID='$FunctionID'");
-	//$this->add_actionlog('Service Management', 'Plan Attribute Deleted');
+	$this->add_actionlog('System Structure', 'Processes and Functions Deleted');
 	return TRUE;
 	}	
 	
@@ -168,7 +168,7 @@ class mdl_sca01002_System_Structure_m extends MY_Model {
 	function insert_dbtables($array)
 	{
 	$functions = $this->db->insert('_systemelements_databasetables',$array);
-	//$this->add_actionlog('System Elements', 'Role Access Created');
+	$this->add_actionlog('System Structure', 'Database Table Created');
 	return $functions;
 	}
 
@@ -177,7 +177,7 @@ class mdl_sca01002_System_Structure_m extends MY_Model {
 	{
 	$this->db->where($where);   
 	$functions = $this->db->update('_systemelements_databasetables',$array);
-	//$this->add_actionlog('System Elements', 'Role Access Updated');
+	$this->add_actionlog('System Structure', 'Database Table Updated');
 	return $functions;
 	}
 
@@ -191,10 +191,26 @@ class mdl_sca01002_System_Structure_m extends MY_Model {
 	function deleteDBTables($TableID)
 	{
 	$query = $this->db->query("Delete from _systemelements_databasetables where TableID='$TableID'");
-	//$this->add_actionlog('Service Management', 'Plan Attribute Deleted');
+	$this->add_actionlog('System Structure', 'Database Table Deleted');
 	return TRUE;
 	}	
 
+	//Save Action Log
+	public function add_actionlog($screen,$details)
+	{
+		$datetime=date("Y-m-d H:i:s");
+		$data = array();
+        $data['ActionScreen']=$screen;	
+		$data['ActionDetails']=$details;
+		$data['DateTime']=$datetime;
+		$action = $this->db->insert('_systemelements_actionlog',$data);
+	}
+
+	//Retrieve Action Log
+	function  get_actionlog(){
+		$query=$this->db->query('select * from _systemelements_actionlog order by ActionID Desc Limit 50');
+		return $query->result();
+	}
 }
 
 /* End of file mdl_sca01002_System_Structure_m.php */
