@@ -71,7 +71,7 @@ class Mdl_sca01001_Service_PricingPlans_m extends MY_Model {
 	{
 	// $this->db->where('PlanParentService =', $id);
 	// $query = $this->db->get('_systemelements_plansmaster');
-	$query = $this->db->query("select * from _systemelements_plansmaster as plan inner join _commonbusinesssetting_currencymaster as currency on plan.PlanCurrency=currency.MasterCurrencyID where PlanParentService='$id'");
+	$query = $this->db->query("select * from _systemelements_plansmaster as plan inner join _systemelements_admincurrencymaster as currency on plan.PlanCurrency=currency.MasterCurrencyID where PlanParentService='$id'");
 	return $query->result();
 	}	
 
