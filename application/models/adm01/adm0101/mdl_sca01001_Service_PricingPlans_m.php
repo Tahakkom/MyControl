@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class mdl_sca01001_Service_PricingPlans_m extends MY_Model {
+class Mdl_sca01001_Service_PricingPlans_m extends MY_Model {
 
 	function __construct() {
 		parent::__construct();

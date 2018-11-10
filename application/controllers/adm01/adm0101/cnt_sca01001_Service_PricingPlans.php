@@ -1,12 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class cnt_sca01001_Service_PricingPlans extends My_Controller {
+class Cnt_sca01001_Service_PricingPlans extends My_Controller {
 
 	function __construct() 
 	{
 		parent::__construct();
-		$this->load->model("adm01/adm0101/mdl_sca01001_Service_PricingPlans_m",'service_pricingplans_m');
+		$this->load->model("adm01/adm0101/Mdl_sca01001_Service_PricingPlans_m",'service_pricingplans_m');
 	}
 
 

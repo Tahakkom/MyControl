@@ -54,5 +54,5 @@ $route['default_controller'] = 'Login/index';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['Service_PricingPlans/(:any)'] = "adm01/adm0101/cnt_sca01001_Service_PricingPlans/$1";
-$route['System_Structure/(:any)'] = "adm01/adm0102/cnt_sca01002_System_Structure/$1";
+$route['Service_PricingPlans/(:any)'] = "adm01/adm0101/Cnt_sca01001_Service_PricingPlans/$1";
+$route['System_Structure/(:any)'] = "adm01/adm0102/Cnt_sca01002_System_Structure/$1";
