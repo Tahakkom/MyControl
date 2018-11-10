@@ -454,7 +454,7 @@ $(document).ready(function(){
     //var rowplanID = $(this).closest('td').find('.getrowplanID .rowplanID').val();
     var rowplanID = $(this).attr('value');
         $.ajax({
-            url: '<?php echo base_url("adm01/adm0101/cnt_sca01001_Service_PricingPlans/getPlanAttribute"); ?>',
+            url: '<?php echo base_url("adm01/adm0101/Cnt_sca01001_Service_PricingPlans/getPlanAttribute"); ?>',
             type: 'post',
             data:{'planID': rowplanID},
             dataType: 'html',
@@ -500,7 +500,7 @@ function add_servicesmaster()
     $(document).ready(function(){
         var dataString = $("#servicesmasterform").serialize();
         console.log(dataString);
-        var url="adm01/adm0101/cnt_sca01001_Service_PricingPlans/ServiceMaster"
+        var url="adm01/adm0101/Cnt_sca01001_Service_PricingPlans/ServiceMaster"
         $.ajax({
         type:"POST",
         url:"<?php echo base_url() ?>"+url,
@@ -510,7 +510,7 @@ function add_servicesmaster()
             if(data == 1)
             {
                 location.reload();
-                //window.location = baseurl+"adm01/adm0101/cnt_sca01001_Service_PricingPlans/index";
+                //window.location = baseurl+"adm01/adm0101/Cnt_sca01001_Service_PricingPlans/index";
             }
             else
             {
@@ -549,7 +549,7 @@ function add_plansmaster()
     $(document).ready(function(){
         var dataString = $("#planmasterform").serialize();
         console.log(dataString);
-        var url="adm01/adm0101/cnt_sca01001_Service_PricingPlans/PlanMaster"
+        var url="adm01/adm0101/Cnt_sca01001_Service_PricingPlans/PlanMaster"
         $.ajax({
         type:"POST",
         url:"<?php echo base_url() ?>"+url,
@@ -574,7 +574,7 @@ function edit_servicesmaster()
 {
    var serviceID = $('#selectservices').val();
    $.ajax({
-        url: '<?php echo base_url("adm01/adm0101/cnt_sca01001_Service_PricingPlans/getServiceMasterData"); ?>',
+        url: '<?php echo base_url("adm01/adm0101/Cnt_sca01001_Service_PricingPlans/getServiceMasterData"); ?>',
         type: 'post',
         data:{'serviceID': serviceID},
         dataType: 'html',
@@ -596,7 +596,7 @@ function edit_servicesmaster()
 function edit_plansmaster($planID)
 {
     $.ajax({
-        url: '<?php echo base_url("adm01/adm0101/cnt_sca01001_Service_PricingPlans/getPlanData"); ?>',
+        url: '<?php echo base_url("adm01/adm0101/Cnt_sca01001_Service_PricingPlans/getPlanData"); ?>',
         type: 'post',
         data:{'planID': $planID},
         dataType: 'html',
@@ -631,7 +631,7 @@ function statusupdate_plansmaster($planID,$status)
         closeOnConfirm: false 
     }, function(){  
         $.ajax({
-        url: '<?php echo base_url("adm01/adm0101/cnt_sca01001_Service_PricingPlans/statusupdatePlanData"); ?>',
+        url: '<?php echo base_url("adm01/adm0101/Cnt_sca01001_Service_PricingPlans/statusupdatePlanData"); ?>',
         type: 'post',
         data:{'planID': $planID, 'Status': $status},
         dataType: 'html',
@@ -667,7 +667,7 @@ function add_planattribute()
     $(document).ready(function(){
         var dataString = $("#planattributeform").serialize();
         console.log(dataString);
-        var url="adm01/adm0101/cnt_sca01001_Service_PricingPlans/PlanAttribute"
+        var url="adm01/adm0101/Cnt_sca01001_Service_PricingPlans/PlanAttribute"
         $.ajax({
         type:"POST",
         url:"<?php echo base_url() ?>"+url,
@@ -692,7 +692,7 @@ function add_planattribute()
 function edit_planattribute($planid,$attrid)
 {
     $.ajax({
-        url: '<?php echo base_url("adm01/adm0101/cnt_sca01001_Service_PricingPlans/getPlanAttributeData"); ?>',
+        url: '<?php echo base_url("adm01/adm0101/Cnt_sca01001_Service_PricingPlans/getPlanAttributeData"); ?>',
         type: 'post',
         data:{'planID': $planid, 'AttributeID': $attrid},
         dataType: 'html',
@@ -721,7 +721,7 @@ function delete_planattribute($attrid)
         closeOnConfirm: false 
     }, function(){  
         $.ajax({
-        url: '<?php echo base_url("adm01/adm0101/cnt_sca01001_Service_PricingPlans/deletePlanAttributeData"); ?>',
+        url: '<?php echo base_url("adm01/adm0101/Cnt_sca01001_Service_PricingPlans/deletePlanAttributeData"); ?>',
         type: 'post',
         data:{'AttributeID': $attrid},
         dataType: 'html',

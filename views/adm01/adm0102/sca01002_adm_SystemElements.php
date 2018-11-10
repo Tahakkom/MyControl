@@ -673,7 +673,7 @@ function add_rolesmaster()
     $(document).ready(function(){
         var dataString = $("#rolesmasterform").serialize();
         console.log(dataString);
-        var url="adm01/adm0102/cnt_sca01002_System_Structure/RoleMaster"
+        var url="adm01/adm0102/Cnt_sca01002_System_Structure/RoleMaster"
         $.ajax({
         type:"POST",
         url:"<?php echo base_url() ?>"+url,
@@ -683,7 +683,7 @@ function add_rolesmaster()
             if(data == 1)
             {
                 location.reload();
-                //window.location = baseurl+"adm01/adm0101/cnt_sca01001_Service_PricingPlans/index";
+                //window.location = baseurl+"adm01/adm0101/Cnt_sca01001_Service_PricingPlans/index";
             }
             else
             {
@@ -699,7 +699,7 @@ function edit_rolesmaster($roleid)
 {
     $("#rolesmaster").addClass("show");
     $.ajax({
-        url: '<?php echo base_url("adm01/adm0102/cnt_sca01002_System_Structure/getRoleMasterSingleData"); ?>',
+        url: '<?php echo base_url("adm01/adm0102/Cnt_sca01002_System_Structure/getRoleMasterSingleData"); ?>',
         type: 'post',
         data:{'RoleID': $roleid},
         dataType: 'html',
@@ -729,7 +729,7 @@ function delete_rolesmaster($roleid)
         closeOnConfirm: false 
     }, function(){  
         $.ajax({
-        url: '<?php echo base_url("adm01/adm0102/cnt_sca01002_System_Structure/deleteRoleMasterData"); ?>',
+        url: '<?php echo base_url("adm01/adm0102/Cnt_sca01002_System_Structure/deleteRoleMasterData"); ?>',
         type: 'post',
         data:{'RoleID': $roleid},
         dataType: 'html',
@@ -747,7 +747,7 @@ function editRoleAccess($RoleAccessID)
 { 
     $("#rolesaccess").addClass("show");
     $.ajax({
-        url: '<?php echo base_url("adm01/adm0102/cnt_sca01002_System_Structure/getRoleAccessSingleData"); ?>',
+        url: '<?php echo base_url("adm01/adm0102/Cnt_sca01002_System_Structure/getRoleAccessSingleData"); ?>',
         type: 'post',
         data:{'RoleAccessID': $RoleAccessID},
         dataType: 'html',
@@ -762,11 +762,11 @@ function editRoleAccess($RoleAccessID)
                 var url;
                 if(item['RoleAccessElementType'] == 'F')
                 {
-                    url="<?php echo base_url("adm01/adm0102/cnt_sca01002_System_Structure/getFunctionsDetails"); ?>";
+                    url="<?php echo base_url("adm01/adm0102/Cnt_sca01002_System_Structure/getFunctionsDetails"); ?>";
                 }
                 if(item['RoleAccessElementType'] == 'S')
                 {
-                    url="<?php echo base_url("adm01/adm0102/cnt_sca01002_System_Structure/getScreensDetails"); ?>";
+                    url="<?php echo base_url("adm01/adm0102/Cnt_sca01002_System_Structure/getScreensDetails"); ?>";
                 }
                 
                 $.ajax({
@@ -797,7 +797,7 @@ function deleteRoleAccess($RoleAccessID)
         closeOnConfirm: false 
     }, function(){  
         $.ajax({
-        url: '<?php echo base_url("adm01/adm0102/cnt_sca01002_System_Structure/deleteRoleAccess"); ?>',
+        url: '<?php echo base_url("adm01/adm0102/Cnt_sca01002_System_Structure/deleteRoleAccess"); ?>',
         type: 'post',
         data:{'RoleAccessID': $RoleAccessID},
         dataType: 'html',
@@ -836,7 +836,7 @@ function add_functions()
     $(document).ready(function(){
         var dataString = $("#processesandfunctionsform").serialize();
         console.log(dataString);
-        var url="adm01/adm0102/cnt_sca01002_System_Structure/ProcessesandFunctions"
+        var url="adm01/adm0102/Cnt_sca01002_System_Structure/ProcessesandFunctions"
         $.ajax({
         type:"POST",
         url:"<?php echo base_url() ?>"+url,
@@ -870,7 +870,7 @@ function deleteFunctions($FunctionID)
         closeOnConfirm: false 
     }, function(){  
         $.ajax({
-        url: '<?php echo base_url("adm01/adm0102/cnt_sca01002_System_Structure/deleteFunctions"); ?>',
+        url: '<?php echo base_url("adm01/adm0102/Cnt_sca01002_System_Structure/deleteFunctions"); ?>',
         type: 'post',
         data:{'FunctionID': $FunctionID},
         dataType: 'html',
@@ -908,7 +908,7 @@ function add_tables()
     $(document).ready(function(){
         var dataString = $("#dbtablesform").serialize();
         console.log(dataString);
-        var url="adm01/adm0102/cnt_sca01002_System_Structure/DatabaseTables"
+        var url="adm01/adm0102/Cnt_sca01002_System_Structure/DatabaseTables"
         $.ajax({
         type:"POST",
         url:"<?php echo base_url() ?>"+url,
@@ -941,7 +941,7 @@ function deleteDBTables($TableID)
         closeOnConfirm: false 
     }, function(){  
         $.ajax({
-        url: '<?php echo base_url("adm01/adm0102/cnt_sca01002_System_Structure/deleteDBTables"); ?>',
+        url: '<?php echo base_url("adm01/adm0102/Cnt_sca01002_System_Structure/deleteDBTables"); ?>',
         type: 'post',
         data:{'TableID': $TableID},
         dataType: 'html',
@@ -982,7 +982,7 @@ function add_screens()
     $(document).ready(function(){
         var dataString = $("#screensform").serialize();
         console.log(dataString);
-        var url="adm01/adm0102/cnt_sca01002_System_Structure/Screens"
+        var url="adm01/adm0102/Cnt_sca01002_System_Structure/Screens"
         $.ajax({
         type:"POST",
         url:"<?php echo base_url() ?>"+url,
@@ -1015,7 +1015,7 @@ function deleteScreens($ScreenID)
         closeOnConfirm: false 
     }, function(){  
         $.ajax({
-        url: '<?php echo base_url("adm01/adm0102/cnt_sca01002_System_Structure/deleteScreens"); ?>',
+        url: '<?php echo base_url("adm01/adm0102/Cnt_sca01002_System_Structure/deleteScreens"); ?>',
         type: 'post',
         data:{'ScreenID': $ScreenID},
         dataType: 'html',
@@ -1044,11 +1044,11 @@ $('#elementtype').on('change', function() {
     var url;
     if(type == 'F')
     {
-        url="<?php echo base_url("adm01/adm0102/cnt_sca01002_System_Structure/getFunctionsDetails"); ?>";
+        url="<?php echo base_url("adm01/adm0102/Cnt_sca01002_System_Structure/getFunctionsDetails"); ?>";
     }
     if(type == 'S')
     {
-        url="<?php echo base_url("adm01/adm0102/cnt_sca01002_System_Structure/getScreensDetails"); ?>";
+        url="<?php echo base_url("adm01/adm0102/Cnt_sca01002_System_Structure/getScreensDetails"); ?>";
     }
     
     $.ajax({
@@ -1086,7 +1086,7 @@ $(".updateFunctions").click(function() {
         });
         console.log(data[0]);
         $.ajax({
-            url: '<?php echo base_url("adm01/adm0102/cnt_sca01002_System_Structure/ProcessesandFunctions"); ?>',
+            url: '<?php echo base_url("adm01/adm0102/Cnt_sca01002_System_Structure/ProcessesandFunctions"); ?>',
             type: 'post',
             data: data[0],
             dataType: 'html',
@@ -1123,7 +1123,7 @@ $(".updateTables").click(function() {
         });
         console.log(data[0]);
         $.ajax({
-            url: '<?php echo base_url("adm01/adm0102/cnt_sca01002_System_Structure/DatabaseTables"); ?>',
+            url: '<?php echo base_url("adm01/adm0102/Cnt_sca01002_System_Structure/DatabaseTables"); ?>',
             type: 'post',
             data: data[0],
             dataType: 'html',
@@ -1160,7 +1160,7 @@ $(".updateScreens").click(function() {
         });
         console.log(data[0]);
         $.ajax({
-            url: '<?php echo base_url("adm01/adm0102/cnt_sca01002_System_Structure/Screens"); ?>',
+            url: '<?php echo base_url("adm01/adm0102/Cnt_sca01002_System_Structure/Screens"); ?>',
             type: 'post',
             data: data[0],
             dataType: 'html',
