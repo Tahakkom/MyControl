@@ -22,7 +22,7 @@ class Cnt_sca01002_System_Structure extends My_Controller {
 		if(isset($_POST['rolemaster']))
 		{ 
 			$this->load->library('form_validation');
-          	$rules = $this->rules();
+          	        $rules = $this->rules();
 	  		$this->form_validation->set_rules($rules);
 	  		if ($this->form_validation->run() == FALSE) 
           	{
