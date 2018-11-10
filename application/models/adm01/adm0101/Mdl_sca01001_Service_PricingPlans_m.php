@@ -39,7 +39,7 @@ class Mdl_sca01001_Service_PricingPlans_m extends MY_Model {
 
 	//Get Currency Master Data
 	function  get_currencymaster(){
-		$query=$this->db->query('select * from _commonbusinesssetting_currencymaster');
+		$query=$this->db->query('select * from _systemelements_admincurrencymaster');
 		return $query->result();
 	}
 
